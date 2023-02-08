@@ -13,7 +13,6 @@ const Stack = createNativeStackNavigator();
 const queryClient = new QueryClient();
 const App = () => {
   return (
-
     <NavigationContainer>
       <QueryClientProvider client={queryClient}>
         <Stack.Navigator initialRouteName="Home">
@@ -23,8 +22,6 @@ const App = () => {
         </Stack.Navigator>
       </QueryClientProvider>
     </NavigationContainer>
-
-
   );
 };
 
