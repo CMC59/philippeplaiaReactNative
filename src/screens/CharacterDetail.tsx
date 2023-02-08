@@ -18,6 +18,25 @@ const Item = ({ firstName, lastName, title, family, imageUrl }: any) => {
     );
 };
 
+export const CharacterDetail = ({ route }) => {
+    const characterfirstname = route.params.firstName;
+    const characterlastname = route.params.lastName;
+    const charactertitle = route.params.title;
+    const characterfamily = route.params.family;
+    const image = route.params.imageUrl;
+    return (
+        <TouchableOpacity>
+            <View style={styles.container}>
+                <View style={styles.textContainer}>
+                    <Text style={styles.text}>{characterfirstname}</Text>
+                    <Text style={styles.text}>{characterlastname}</Text>
+                    <Text style={styles.text}>{charactertitle}</Text>
+                    <Text style={styles.text}>{characterfamily}</Text>
+                </View>
+            </View>
+        </TouchableOpacity>
+    );
+};
 
 export function CharactersFeedScreen() {
     const renderItem = (

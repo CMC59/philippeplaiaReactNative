@@ -3,45 +3,28 @@ import { SafeAreaView, StyleSheet, StatusBar, View, FlatList, Text } from "react
 import { Button, Card } from 'react-native-paper';
 import { useCharacter } from "../hook/useCharacter";
 import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Routes } from "../navigation/Routes";
 
 const Item = ({ firstName, lastName, imageUrl }: any) => {
-
+  const navigation = useNavigation<any>();
   return (
-    <Card style={styles.card}>
-      <Card.Cover style={styles.image} source={{ uri: imageUrl }} />
-      <Card.Content>
-        <Text style={styles.name}> {firstName} {lastName}</Text>
-      </Card.Content>
-
-    </Card>
-  );
-};
-export const CharacterDetail = ({ route }) => {
-  const characterfirstname = route.params.firstName;
-  const characterlastname = route.params.lastName;
-  const charactertitle = route.params.title;
-  const characterfamily = route.params.family;
-  const image = route.params.imageUrl;
-  return (
-    <TouchableOpacity onPress={() => {
-      /* 1. Navigate to the Details route with params */
-      navigation.navigate(Routes.CharacterDetail, {
-        characterfirstname,
-        characterlastname,
-        charactertitle,
-        characterfamily,
-        image,
-      });
-    } style={styles.touchable} >
-      <View style={styles.container}>
-        <Image style={styles.image} source={{ uri: imageUrl }} />
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>{characterfirstname}</Text>
-          <Text style={styles.text}>{characterlastname}</Text>
-          <Text style={styles.text}>{charactertitle}</Text>
-          <Text style={styles.text}>{characterfamily}</Text>
-        </View>
-      </View>
+    <TouchableOpacity
+      style={styles.touchable} onPress={() => {
+        /* 1. Navigate to the Details route with params */
+        navigation.navigate(Routes.CHARACTER_SCREEN_DETAIL, {
+          firstName,
+          imageUrl,
+          lastName,
+        });
+      }}
+    >
+      <Card style={styles.card}>
+        <Card.Cover style={styles.image} source={{ uri: imageUrl }} />
+        <Card.Content>
+          <Text style={styles.name}> {firstName} {lastName}</Text>
+        </Card.Content>
+      </Card>
     </TouchableOpacity>
   );
 };
