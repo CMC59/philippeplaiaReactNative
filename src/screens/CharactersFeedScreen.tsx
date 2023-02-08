@@ -6,7 +6,7 @@ import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Routes } from "../navigation/Routes";
 
-const Item = ({ firstName, lastName, imageUrl }: any) => {
+const Item = ({ firstName, lastName, title, family, imageUrl }: any) => {
   const navigation = useNavigation<any>();
   return (
     <TouchableOpacity
@@ -16,6 +16,8 @@ const Item = ({ firstName, lastName, imageUrl }: any) => {
           firstName,
           imageUrl,
           lastName,
+          title,
+          family,
         });
       }}
     >

@@ -7,21 +7,17 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { CharacterDetail } from './src/screens/CharacterDetail';
+import { Navigator } from './src/navigation/Navigator';
 
 const Stack = createNativeStackNavigator();
 
 const queryClient = new QueryClient();
 const App = () => {
   return (
-    <NavigationContainer>
-      <QueryClientProvider client={queryClient}>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Routes.LOGIN_SCREEN" component={App} />
-          <Stack.Screen name="Routes.CHARACTERS_SCREEN" component={CharactersFeedScreen} />
-          <Stack.Screen name="Routes.CHARACTER_SCREEN_DETAIL" component={CharacterDetail} />
-        </Stack.Navigator>
-      </QueryClientProvider>
-    </NavigationContainer>
+    <QueryClientProvider client={queryClient}>
+      <Navigator />
+    </QueryClientProvider>
+
   );
 };
 
