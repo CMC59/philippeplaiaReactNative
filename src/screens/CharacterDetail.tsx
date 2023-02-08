@@ -17,10 +17,9 @@ export const CharacterDetail = ({ route }) => {
         <Card style={styles.container}>
             <Card.Cover source={{ uri: image }} />
             <Card.Content>
-                <Text style={styles.text}>{characterfirstname}</Text>
-                <Text style={styles.text}>{characterlastname}</Text>
-                <Text style={styles.text}>{charactertitle}</Text>
-                <Text style={styles.text}>{characterfamily}</Text>
+                <Text style={styles.name}>{characterfirstname} {characterlastname}</Text>
+                <Text style={styles.model}>{charactertitle}</Text>
+                <Text style={styles.cost}>{characterfamily}</Text>
             </Card.Content>
         </Card>
 
@@ -31,12 +30,25 @@ export const CharacterDetail = ({ route }) => {
 
 
 const styles = StyleSheet.create({
-
     container: {
-        flex: 1,
+        paddingHorizontal: 20,
+        marginTop: 20,
+    },
+    card: {
+        backgroundColor: '#c3cfe2',
+        display: 'flex',
+        alignItems: 'center',
+        margin: 20,
 
-
-        backgroundColor: 'red'
+    },
+    name: {
+        fontSize: 32,
+    },
+    model: {
+        fontWeight: 'bold',
+    },
+    cost: {
+        fontStyle: 'italic',
     },
     image: {
         marginTop: 10,
@@ -44,6 +56,25 @@ const styles = StyleSheet.create({
         height: 300,
         width: 300,
     },
+    touchable: {
+        padding: 10,
+    },
+    navContainer: {
+        height: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: '#ddd',
+    },
+    navItem: {
+        fontSize: 16,
+    },
+    textContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
     text: {
         fontWeight: "bold",
         fontSize: 20,

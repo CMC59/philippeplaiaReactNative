@@ -38,6 +38,8 @@ export function CharactersFeedScreen() {
       firstName={item.firstName}
       lastName={item.lastName}
       imageUrl={item.imageUrl}
+      title={item.title}
+      family={item.family}
     />;
 
   const { data, status } = useCharacter();
