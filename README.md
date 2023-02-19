@@ -49,7 +49,7 @@ you can go back to the homepage in 2 ways : <br>
 
  <img src="https://user-images.githubusercontent.com/76819554/219960910-377159a8-3002-409f-bfaf-8fd0934b223e.svg" alt="github" width="340" height="340"/>
  
-<i>But First, Download EXPO GO on your Smartphone</i>
+<i>But First, Download & Install EXPO GO on your Smartphone</i>
 
 
 ![giphy (10)](https://user-images.githubusercontent.com/76819554/219961668-876dec7a-4d14-4136-8187-dda64bc83695.gif)
