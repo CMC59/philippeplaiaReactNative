@@ -54,6 +54,7 @@ you can go back to the homepage in 2 ways : <br>
 
 ![giphy (10)](https://user-images.githubusercontent.com/76819554/219961668-876dec7a-4d14-4136-8187-dda64bc83695.gif)
 
-
+<i>Or open this link in your device</i>
+exp://exp.host/@plaia/philippeplaia?release-channel=default
 
 ### ENJOY !
