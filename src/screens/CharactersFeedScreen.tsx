@@ -73,9 +73,15 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
+    backgroundColor: 'Colors.white',
+    borderRadius: 15,
+    shadowColor: 'Colors.shadow',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 8,
   },
   card: {
-    backgroundColor: '#c3cfe2',
+
     display: 'flex',
     alignItems: 'center',
     margin: 20,
